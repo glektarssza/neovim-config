@@ -1,5 +1,5 @@
 -- Set color scheme
--- vim.cmd.colorscheme("")
+vim.cmd.colorscheme("onedark")
 
 -- Set system keyboard for yank
 vim.opt.clipboard = "unnamedplus"
