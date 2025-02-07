@@ -5,7 +5,8 @@ return {
     },
     config = function()
         require("lualine").setup({
-            theme = "onedark"
+            theme = "onedark",
+            globalstatus = true
         })
     end
 }
