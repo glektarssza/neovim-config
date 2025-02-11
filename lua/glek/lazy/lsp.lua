@@ -76,5 +76,45 @@ return {
                 disallow_symbol_nonprefix_matching = false,
             },
         })
+        local capabilities = require("cmp_nvim_lsp").default_capabilities()
+        require("lspconfig")["ts_ls"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["jsonls"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["gh_action_ls"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["cmake"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["clangd"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["denols"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["yamlls"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["bashls"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["html"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["ols"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["omnisharp"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["rust_analyzer"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["wgsl_analyzer"].setup({
+            capabilities = capabilities,
+        })
     end,
 }
