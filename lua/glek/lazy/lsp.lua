@@ -118,9 +118,6 @@ return {
         require("lspconfig")["jsonls"].setup({
             capabilities = capabilities,
         })
-        require("lspconfig")["gh_action_ls"].setup({
-            capabilities = capabilities,
-        })
         require("lspconfig")["cmake"].setup({
             capabilities = capabilities,
         })
@@ -178,6 +175,36 @@ return {
             capabilities = capabilities,
         })
         require("lspconfig")["wgsl_analyzer"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["cmake"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["awk_ls"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["cssls"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["dockerls"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["eslint"].setup({
+            capabilities = capabilities,
+            on_attach = function(client, bufnr)
+                vim.api.nvim_create_autocmd("BufPreWrite", {
+                    buffer = bufnr,
+                    command = "EslintFixAll",
+                })
+            end,
+        })
+        require("lspconfig")["pug"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["ruby_lsp"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["rust_analyzer"].setup({
             capabilities = capabilities,
         })
     end,
