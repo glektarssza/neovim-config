@@ -191,7 +191,7 @@ return {
         })
         require("lspconfig")["eslint"].setup({
             capabilities = capabilities,
-            on_attach = function(client, bufnr)
+            on_attach = function(_, bufnr)
                 vim.api.nvim_create_autocmd("BufPreWrite", {
                     buffer = bufnr,
                     command = "EslintFixAll",
@@ -205,6 +205,12 @@ return {
             capabilities = capabilities,
         })
         require("lspconfig")["rust_analyzer"].setup({
+            capabilities = capabilities,
+        })
+        require("lspconfig")["powershell_es"].setup({
+            bundle_path = "R:/repositories/github/PowerShell/PowerShellEditorServices/module",
+        })
+        require("lspconfig")["gh_actions_ls"].setup({
             capabilities = capabilities,
         })
     end,
