@@ -208,7 +208,7 @@ return {
             capabilities = capabilities,
         })
         require("lspconfig")["powershell_es"].setup({
-            bundle_path = "R:/repositories/github/PowerShell/PowerShellEditorServices/module",
+            bundle_path = vim.env.USERPROFILE .. "/dev/repositories/github/PowerShell/PowerShellEditorServices/module",
         })
         require("lspconfig")["gh_actions_ls"].setup({
             capabilities = capabilities,
