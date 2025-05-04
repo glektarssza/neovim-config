@@ -2,6 +2,7 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
         "neovim/nvim-lspconfig",
+        "hrsh7th/cmp-vsnip",
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
@@ -43,7 +44,7 @@ return {
         cmp.setup({
             snippet = {
                 expand = function(args)
-                    vim.snippet.expand(args.body)
+                    vim.fn["vsnip#anonymous"](args.body)
                 end,
             },
             window = {
@@ -51,13 +52,16 @@ return {
                 documentation = cmp.config.window.bordered(),
             },
             mapping = cmp.mapping.preset.insert({
-                ["<C-Space>"] = cmp.mapping.complete(),
+                ["<C-s>"] = cmp.mapping.complete(),
                 ["<C-e>"] = cmp.mapping.abort(),
                 ["<CR>"] = cmp.mapping.confirm({ select = true }),
             }),
             sources = cmp.config.sources({
                 {
                     name = "nvim_lsp",
+                },
+                {
+                    name = "vsnip",
                 },
             }, {
                 {
