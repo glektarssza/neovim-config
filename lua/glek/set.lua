@@ -23,8 +23,10 @@ vim.opt.incsearch = true
 -- Enable terminal GUI colors
 vim.opt.termguicolors = true
 
--- Force Unix file mode
-vim.opt.fileformat = "unix"
+if vim.opt.modifiable then
+    -- Force Unix file mode
+    vim.opt.fileformat = "unix"
+end
 
 -- Fix end of lines
 vim.opt.fixeol = true
