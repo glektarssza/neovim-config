@@ -1,6 +1,6 @@
 return {
     "hrsh7th/cmp-vsnip",
     dependencies = {
-        "vim-vsnip"
+        "hrsh7th/vim-vsnip"
     },
 }
