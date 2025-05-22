@@ -211,8 +211,15 @@ return {
         require("lspconfig")["rust_analyzer"].setup({
             capabilities = capabilities,
         })
+        local sysname = vim.uv.os_uname().sysname
+        local home = ""
+        if sysname:match("^Windows") ~= nil then
+            home = os.getenv("USERPROFILE")
+        else
+            home = os.getenv("HOME")
+        end
         require("lspconfig")["powershell_es"].setup({
-            bundle_path = vim.env.USERPROFILE .. "/repositories/github/PowerShell/PowerShellEditorServices/module",
+            bundle_path = home .. "/repositories/github/PowerShell/PowerShellEditorServices/module",
         })
         require("lspconfig")["gh_actions_ls"].setup({
             capabilities = capabilities,
