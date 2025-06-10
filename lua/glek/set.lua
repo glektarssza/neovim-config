@@ -1,15 +1,29 @@
 -- Set color scheme
 vim.cmd.colorscheme("onedark")
 
--- Set system keyboard for yank
+-- Set clipboard provider based on system
 vim.opt.clipboard = "unnamedplus"
 if vim.fn.has("wsl") == 1 then
-    vim.api.nvim_create_autocmd("TextYankPost", {
-        group = vim.api.nvim_create_augroup('Yank', { clear = true }),
-        callback = function()
-            vim.fn.system("clip.exe", vim.fn.getreg('"'))
-        end
-    })
+    if vim.fn.executable("win32yank.exe") == 1 then
+        vim.g.clipboard = "win32yank"
+    else
+        vim.g.clipboard = {
+            name = "WslClipboard",
+            copy = {
+                ["+"] = "clip.exe",
+                ["*"] = "clip.exe",
+            },
+            paste = {
+                ["+"] =
+                "powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))",
+                ["*"] =
+                "powershell.exe -NoLogo -NoProfile -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))",
+            },
+            cache_enabled = 0
+        }
+    end
+elseif vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
+    vim.g.clipboard = "clip"
 end
 
 -- Use line numbers
