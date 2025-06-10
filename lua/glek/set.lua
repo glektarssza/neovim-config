@@ -23,7 +23,11 @@ if vim.fn.has("wsl") == 1 then
         }
     end
 elseif vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1 then
-    vim.g.clipboard = "clip"
+    if vim.fn.executable("win32yank.exe") == 1 then
+        vim.g.clipboard = "win32yank"
+    else
+        vim.g.clipboard = "clip"
+    end
 end
 
 -- Use line numbers
