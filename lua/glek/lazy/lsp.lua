@@ -208,9 +208,6 @@ return {
         require("lspconfig")["ruby_lsp"].setup({
             capabilities = capabilities,
         })
-        require("lspconfig")["rust_analyzer"].setup({
-            capabilities = capabilities,
-        })
         local sysname = vim.uv.os_uname().sysname
         local home = ""
         if sysname:match("^Windows") ~= nil then
