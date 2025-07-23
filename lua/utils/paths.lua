@@ -31,21 +31,6 @@ local function get_user_script_dir(user)
 end
 m.get_user_script_dir = get_user_script_dir
 
---- Get the path to the user "home" directory.
---- @return string | nil path The path to the user "home" directory.
-local function get_user_home_dir()
-    if os.is_win() then
-        if vim.env.OneDrive ~= nil then
-            return vim.env.OneDrive
-        else
-            return vim.env.USERPROFILE
-        end
-    else
-        return vim.env.HOME
-    end
-end
-m.get_user_home_dir = get_user_home_dir
-
 --- Check whether a path exists.
 --- @param path string The path to check.
 --- @return boolean result Whether the path exists.
