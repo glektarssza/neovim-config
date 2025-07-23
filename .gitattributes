@@ -6,3 +6,33 @@
 
 # Treat .cmd files as text with Windows-style line endings by default
 *.cmd text eol=crlf
+
+# Treat .otf files as binary
+*.otf binary
+
+# Track .otf files with Git LFS
+*.otf filter=lfs diff=lfs merge=lfs -text
+
+# Treat .ttf files as binary
+*.ttf binary
+
+# Track .ttf files with Git LFS
+*.ttf filter=lfs diff=lfs merge=lfs -text
+
+# Treat .woff files as binary
+*.woff binary
+
+# Track .woff files with Git LFS
+*.woff filter=lfs diff=lfs merge=lfs -text
+
+# Treat .woff2 files as binary
+*.woff2 binary
+
+# Track .woff2 files with Git LFS
+*.woff2 filter=lfs diff=lfs merge=lfs -text
+
+# Treat .eot files as binary
+*.eot binary
+
+# Track .eot files with Git LFS
+*.eot filter=lfs diff=lfs merge=lfs -text
