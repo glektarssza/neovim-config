@@ -3,6 +3,9 @@
 ### Workspace Folder ###
 .vscode/*
 
+### Lua Language Server ###
+.luarc.json
+
 ### Exceptions ###
 !.vscode/extensions.json
 !.vscode/launch.json
