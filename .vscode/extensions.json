@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "EditorConfig.EditorConfig",
+        "GitHub.remotehub",
+        "GitHub.vscode-pull-request-github",
+        "github.vscode-github-actions",
+        "sumneko.lua"
+    ]
+}
