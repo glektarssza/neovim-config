@@ -1,0 +1,19 @@
+{
+    "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+    "id": "vim-dictionary",
+    "version": "0.2",
+    "name": "Vim Custom Dictionary Configuration",
+    "description": "Custom dictionary definition configuration for Vim.",
+    "readonly": true,
+    "dictionaryDefinitions": [
+        {
+            "name": "vim-dictionary",
+            "description": "Vim Dictionary",
+            "type": "S",
+            "useCompounds": false,
+            "noSuggest": true,
+            "path": "../dictionaries/vim.txt"
+        }
+    ],
+    "dictionaries": ["vim-dictionary"]
+}
