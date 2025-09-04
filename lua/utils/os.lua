@@ -18,16 +18,16 @@ m.is_linux = is_linux
 --- @param name string The name of the variable to get.
 --- @return string | nil result The value of the variable or `nil` if the variable does not exist.
 --- @return string | nil err The error that occurred if the variable could not be fetched.
---- @return uv.error_name | nil err_name The name of the error that occurred if the variable could not be fetched.
+--- @return string | nil err_name The name of the error that occurred if the variable could not be fetched.
 local function get_env_var(name)
-    return vim.uv.os_getenv(name)
+    return vim.fn.getenv(name)
 end
 m.get_env_var = get_env_var
 
 --- Get the home directory of the current user.
 --- @return string | nil result The home directory of the current user.
 --- @return string | nil err The error that occurred while fetching the home directory of the current user.
---- @return uv.error_name | nil err_name The name of the error that occurred while fetching the home directory of the current user.
+--- @return string | nil err_name The name of the error that occurred while fetching the home directory of the current user.
 local function get_user_home_dir()
     return vim.uv.os_homedir()
 end
