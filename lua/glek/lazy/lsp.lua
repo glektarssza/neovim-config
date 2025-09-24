@@ -221,5 +221,8 @@ return {
         require("lspconfig")["gh_actions_ls"].setup({
             capabilities = capabilities,
         })
+        require("lspconfig")["jqls"].setup({
+            capabilities = capabilities,
+        })
     end,
 }
