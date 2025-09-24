@@ -209,7 +209,7 @@ return {
             capabilities = capabilities,
         })
         local sysname = vim.uv.os_uname().sysname
-        local home = ""
+        local home = nil
         if sysname:match("^Windows") ~= nil then
             home = os.getenv("USERPROFILE")
         else
