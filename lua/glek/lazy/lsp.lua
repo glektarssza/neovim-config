@@ -215,9 +215,11 @@ return {
         else
             home = os.getenv("HOME")
         end
-        require("lspconfig")["powershell_es"].setup({
-            bundle_path = home .. "/repositories/github/PowerShell/PowerShellEditorServices/module",
-        })
+        if home ~= nil then
+            require("lspconfig")["powershell_es"].setup({
+                bundle_path = home .. "/repositories/github/PowerShell/PowerShellEditorServices/module",
+            })
+        end
         require("lspconfig")["gh_actions_ls"].setup({
             capabilities = capabilities,
         })
