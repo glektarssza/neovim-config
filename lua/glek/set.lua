@@ -56,3 +56,6 @@ end
 
 -- Fix end of lines
 vim.opt.fixeol = true
+
+-- Register the '.jq' extension for jq files.
+vim.cmd([[au BufRead,BufNewFile *.jq setfiletype jq]])
