@@ -116,31 +116,31 @@ return {
             },
         })
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
-        require("lspconfig")["ts_ls"].setup({
+        vim.lsp.config("ts_ls", {
             capabilities = capabilities,
         })
-        require("lspconfig")["jsonls"].setup({
+        vim.lsp.config("jsonls", {
             capabilities = capabilities,
         })
-        require("lspconfig")["cmake"].setup({
+        vim.lsp.config("cmake", {
             capabilities = capabilities,
         })
-        require("lspconfig")["clangd"].setup({
+        vim.lsp.config("clangd", {
             capabilities = capabilities,
         })
-        require("lspconfig")["denols"].setup({
+        vim.lsp.config("denols", {
             capabilities = capabilities,
         })
-        require("lspconfig")["yamlls"].setup({
+        vim.lsp.config("yamlls", {
             capabilities = capabilities,
         })
-        require("lspconfig")["bashls"].setup({
+        vim.lsp.config("bashls", {
             capabilities = capabilities,
         })
-        require("lspconfig")["html"].setup({
+        vim.lsp.config("html", {
             capabilities = capabilities,
         })
-        require("lspconfig")["lua_ls"].setup({
+        vim.lsp.config("lua_ls", {
             capabilities = capabilities,
             on_init = function(client)
                 if client.workspace_folders then
@@ -169,31 +169,31 @@ return {
                 Lua = {},
             },
         })
-        require("lspconfig")["ols"].setup({
+        vim.lsp.config("ols", {
             capabilities = capabilities,
         })
-        require("lspconfig")["omnisharp"].setup({
+        vim.lsp.config("omnisharp", {
             capabilities = capabilities,
         })
-        require("lspconfig")["rust_analyzer"].setup({
+        vim.lsp.config("rust_analyzer", {
             capabilities = capabilities,
         })
-        require("lspconfig")["wgsl_analyzer"].setup({
+        vim.lsp.config("wgsl_analyzer", {
             capabilities = capabilities,
         })
-        require("lspconfig")["cmake"].setup({
+        vim.lsp.config("cmake", {
             capabilities = capabilities,
         })
-        require("lspconfig")["awk_ls"].setup({
+        vim.lsp.config("awk_ls", {
             capabilities = capabilities,
         })
-        require("lspconfig")["cssls"].setup({
+        vim.lsp.config("cssls", {
             capabilities = capabilities,
         })
-        require("lspconfig")["dockerls"].setup({
+        vim.lsp.config("dockerls", {
             capabilities = capabilities,
         })
-        require("lspconfig")["eslint"].setup({
+        vim.lsp.config("eslint", {
             capabilities = capabilities,
             on_attach = function(_, bufnr)
                 vim.api.nvim_create_autocmd("BufWritePre", {
@@ -202,10 +202,10 @@ return {
                 })
             end,
         })
-        require("lspconfig")["pug"].setup({
+        vim.lsp.config("pug", {
             capabilities = capabilities,
         })
-        require("lspconfig")["ruby_lsp"].setup({
+        vim.lsp.config("ruby_lsp", {
             capabilities = capabilities,
         })
         local sysname = vim.uv.os_uname().sysname
@@ -216,14 +216,14 @@ return {
             home = os.getenv("HOME")
         end
         if home ~= nil then
-            require("lspconfig")["powershell_es"].setup({
+            vim.lsp.config("powershell_es", {
                 bundle_path = home .. "/repositories/github/PowerShell/PowerShellEditorServices/module",
             })
         end
-        require("lspconfig")["gh_actions_ls"].setup({
+        vim.lsp.config("gh_actions_ls", {
             capabilities = capabilities,
         })
-        require("lspconfig")["jqls"].setup({
+        vim.lsp.config("jqls", {
             capabilities = capabilities,
         })
     end,
