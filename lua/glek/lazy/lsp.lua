@@ -122,27 +122,35 @@ return {
         vim.lsp.config("ts_ls", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("ts_ls")
         vim.lsp.config("jsonls", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("jsonls")
         vim.lsp.config("cmake", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("cmake")
         vim.lsp.config("clangd", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("clangd")
         vim.lsp.config("denols", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("denols")
         vim.lsp.config("yamlls", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("yamlls")
         vim.lsp.config("bashls", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("bashls")
         vim.lsp.config("html", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("html")
         vim.lsp.config("lua_ls", {
             capabilities = capabilities,
             on_init = function(client)
@@ -172,30 +180,39 @@ return {
                 Lua = {},
             },
         })
+        vim.lsp.enable("lua_ls")
         vim.lsp.config("ols", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("ols")
         vim.lsp.config("omnisharp", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("omnisharp")
         vim.lsp.config("rust_analyzer", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("rust_analyzer")
         vim.lsp.config("wgsl_analyzer", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("wgsl_analyzer")
         vim.lsp.config("cmake", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("cmake")
         vim.lsp.config("awk_ls", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("awk_ls")
         vim.lsp.config("cssls", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("cssls")
         vim.lsp.config("dockerls", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("dockerls")
         vim.lsp.config("eslint", {
             capabilities = capabilities,
             on_attach = function(_, bufnr)
@@ -205,9 +222,11 @@ return {
                 })
             end,
         })
+        vim.lsp.enable("eslint")
         vim.lsp.config("pug", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("pug")
         vim.lsp.config("ruby_lsp", {
             capabilities = capabilities,
         })
@@ -223,11 +242,14 @@ return {
                 bundle_path = home .. "/repositories/github/PowerShell/PowerShellEditorServices/module",
             })
         end
+        vim.lsp.enable("ruby_lsp")
         vim.lsp.config("gh_actions_ls", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("gh_actions_ls")
         vim.lsp.config("jqls", {
             capabilities = capabilities,
         })
+        vim.lsp.enable("jqls")
     end,
 }
