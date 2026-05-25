@@ -251,5 +251,46 @@ return {
             capabilities = capabilities,
         })
         vim.lsp.enable("jqls")
+        vim.lsp.config("nginx", {
+            capabilities = capabilities,
+        })
+
+        vim.lsp.enable("nginx")
+        vim.lsp.config("systemd_lsp", {
+            capabilities = capabilities,
+        })
+        vim.lsp.enable("systemd_lsp")
+        vim.lsp.config("vimls", {
+            capabilities = capabilities,
+        })
+        vim.lsp.enable("vimls")
+        vim.lsp.config("vue_ls", {
+            capabilities = capabilities,
+        })
+        vim.lsp.enable("vue_ls")
+        vim.lsp.config("sqlls", {
+            capabilities = capabilities,
+        })
+        vim.lsp.enable("sqlls")
+        vim.lsp.config("rls", {
+            capabilities = capabilities,
+        })
+        vim.lsp.enable("rls")
+        vim.lsp.config("ols", {
+            capabilities = capabilities,
+        })
+        vim.lsp.enable("ols")
+        vim.lsp.config("jdtls", {
+            capabilities = capabilities,
+        })
+        vim.lsp.enable("jdtls")
+        vim.lsp.config("jdtls", {
+            capabilities = capabilities,
+        })
+        vim.lsp.enable("jdtls")
+        vim.lsp.config("groovyls", {
+            capabilities = capabilities,
+        })
+        vim.lsp.enable("groovyls")
     end,
 }

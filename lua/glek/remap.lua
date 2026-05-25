@@ -1,9 +1,20 @@
 local wk = require("which-key")
+local function termcodes(str)
+    return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
 wk.add({
-    mode = { "v" },
-    { "<leader>s",  group = "Silicon" },
-    { "<leader>sc", function() require("nvim-silicon").clip() end,  desc = "Copy code screenshot to clipboard" },
-    { "<leader>sf", function() require("nvim-silicon").file() end,  desc = "Save code screenshot as file" },
-    { "<leader>ss", function() require("nvim-silicon").shoot() end, desc = "Create code screenshot" },
-
+    "<C-a>d",
+    [[<C-\><C-n>]],
+    desc = "Escape terminal mode",
+    noremap = true,
+    mode = "t",
+})
+wk.add({
+    "<Esc>",
+    function()
+        vim.notify("Sent termianl escape sequence!")
+    end,
+    desc = "Escape terminal mode",
+    noremap = true,
+    mode = "n",
 })
