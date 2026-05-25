@@ -9,12 +9,3 @@ wk.add({
     noremap = true,
     mode = "t",
 })
-wk.add({
-    "<Esc>",
-    function()
-        vim.notify("Sent termianl escape sequence!")
-    end,
-    desc = "Escape terminal mode",
-    noremap = true,
-    mode = "n",
-})
